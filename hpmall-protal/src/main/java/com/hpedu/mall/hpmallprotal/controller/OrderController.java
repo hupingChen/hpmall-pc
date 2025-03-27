@@ -51,8 +51,8 @@ public class OrderController {
 /*        ServiceInstance choose = loadBalancerClient.choose("goods-service");
         String goodsInfoUrl = String.format("http://%s:%s", choose.getHost(), choose.getPort());
         log.info("打印URL{}",goodsInfoUrl);*/
-        String goodsInfoUrl = "http://goods-service/goods";
-        String goodsInfo = restTemplate.getForObject(goodsInfoUrl, String.class);
+        String url = "http://goods-service/goods";
+        String goodsInfo = restTemplate.getForObject(url, String.class);
 
         String promotionInfo = restTemplate.getForObject("http://marking-service/promotion", String.class);
         MultiValueMap<String,Object> param = new LinkedMultiValueMap<>();

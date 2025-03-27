@@ -5,6 +5,8 @@
     <modules>
         <module>ms-service</module>
         <module>hpmall-protal</module>
+        <module>eeureka-server</module>
+        <module>ms-service-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -34,6 +36,21 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.hpedu.mall</groupId>
+                <artifactId>goods-service-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hpdeu.mall</groupId>
+                <artifactId>marking-service-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hpedu.mall</groupId>
+                <artifactId>order-service-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -44,6 +61,14 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
